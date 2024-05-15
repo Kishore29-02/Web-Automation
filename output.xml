@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-13T23:18:03.776263" rpa="false" schemaversion="5">
+<suite id="s1" name="userCheck" source="C:\Users\KISHORE\PycharmProjects\TestAutomation\TestCases\userCheck.robot">
+<test id="s1-t1" name="Verify that Admin or Global admin can login" line="17">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:04.617675" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-13T23:18:04.615651" elapsed="20.162226"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-13T23:18:24.779388" elapsed="0.070302"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Login to Ark Enterprise Platform</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-13T23:18:24.851365" elapsed="2.165783"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:27.093306" level="INFO">${EMAIL_LABEL} = Email</msg>
+<var>${EMAIL_LABEL}</var>
+<arg>xpath://*[@testid='org-login-email-input-label']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:27.019252" elapsed="0.074054"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${EMAIL_LABEL}</arg>
+<arg>${EMAIL_LABEL_TEST}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-13T23:18:27.094861" elapsed="0.000526"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:27.180838" level="INFO">Element 'id:email' is displayed.</msg>
+<arg>id:email</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T23:18:27.097448" elapsed="0.084888"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>id:email</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-13T23:18:27.183304" elapsed="0.077997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:27.265290" level="INFO">Typing text 'admin@justomerchantz.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:27.264422" elapsed="1.090045"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:28.452106" level="INFO">${PASS_LABEL} = Password</msg>
+<var>${PASS_LABEL}</var>
+<arg>xpath://*[@testid='org-login-password-input-label']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:28.356479" elapsed="0.095627"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${EMAIL_LABEL}</arg>
+<arg>${EMAIL_LABEL_TEST}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-13T23:18:28.454360" elapsed="0.000963"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:28.531307" level="INFO">Element 'id:password' is displayed.</msg>
+<arg>id:password</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T23:18:28.456282" elapsed="0.075025"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>id:password</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-13T23:18:28.533161" elapsed="0.083480"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:28.618531" level="INFO">Typing text 'P@ssword0123' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:28.617841" elapsed="0.741739"/>
+</kw>
+<kw name="Page Should Contain Button" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:29.593665" level="INFO">Current page contains button 'xpath://*[@testid='org-login-submit-button']'.</msg>
+<arg>xpath://*[@testid='org-login-submit-button']</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-05-13T23:18:29.360719" elapsed="0.233940"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:29.595659" level="INFO">Clicking button 'xpath://*[@testid='org-login-submit-button']'.</msg>
+<arg>xpath://*[@testid='org-login-submit-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:29.595659" elapsed="0.296541"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://div[contains(@class, "ant-message-success")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T23:18:29.893204" elapsed="3.166345"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:33.132790" level="INFO">${actual_message} = Login success 😃!</msg>
+<var>${actual_message}</var>
+<arg>xpath://div[contains(@class, "ant-message-success")]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:33.060696" elapsed="0.072094"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_message}</arg>
+<arg>${EXPECTED_MESSAGE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-13T23:18:33.136346" elapsed="0.000996"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Choose an Organization</arg>
+<arg>60</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-13T23:18:33.138349" elapsed="0.062068"/>
+</kw>
+<status status="PASS" start="2024-05-13T23:18:04.599351" elapsed="28.602113"/>
+</test>
+<test id="s1-t2" name="Verify that user can open support dashboard" line="47">
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:33.209567" level="INFO">Simulating Mouse Over on element 'xpath://*[@testid='org-dashboard-profile-icon']'.</msg>
+<arg>xpath://*[@testid='org-dashboard-profile-icon']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:33.208962" elapsed="0.409667"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://a[@testid='org-profile-popover-support-dashboard-btn']</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T23:18:33.619714" elapsed="0.652399"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:34.278978" level="INFO">Clicking link 'xpath://a[@testid='org-profile-popover-support-dashboard-btn']'.</msg>
+<arg>xpath://a[@testid='org-profile-popover-support-dashboard-btn']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:34.277423" elapsed="0.416660"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Support Dashboard</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-13T23:18:34.701149" elapsed="0.153669"/>
+</kw>
+<status status="PASS" start="2024-05-13T23:18:33.206386" elapsed="1.649971"/>
+</test>
+<test id="s1-t3" name="Verify that user can navigate to all users page" line="53">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:35.008487" level="INFO">${card_name} = All Users List</msg>
+<var>${card_name}</var>
+<arg>xpath://*[@data-testid='sub-user-list']/span/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:34.861243" elapsed="0.147244"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${card_name}</arg>
+<arg>${card_name_test}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-13T23:18:35.015630" elapsed="0.001078"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:35.072678" level="INFO">Clicking element '//*[@data-testid='sub-user-list']'.</msg>
+<arg>//*[@data-testid='sub-user-list']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:35.071450" elapsed="0.842439"/>
+</kw>
+<status status="PASS" start="2024-05-13T23:18:34.859195" elapsed="1.056239"/>
+</test>
+<test id="s1-t4" name="Verify that search is working" line="58">
+<kw name="select user type drop">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-13T23:18:35.924206" level="INFO">${temp} = xpath://*[@data-testid='user-type-select']</msg>
+<var>${temp}</var>
+<arg>f"xpath://*[@data-testid='user-type-${type}']"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-13T23:18:35.922656" elapsed="0.001550"/>
+</kw>
+<return>
+<value>${temp}</value>
+<status status="PASS" start="2024-05-13T23:18:35.924206" elapsed="0.001022"/>
+</return>
+<msg time="2024-05-13T23:18:35.925228" level="INFO">${type_drop} = xpath://*[@data-testid='user-type-select']</msg>
+<var>${type_drop}</var>
+<arg>select</arg>
+<status status="PASS" start="2024-05-13T23:18:35.920581" elapsed="0.005679"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:35.928327" level="INFO">Clicking element 'xpath://*[@data-testid='user-type-select']'.</msg>
+<arg>${type_drop}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:35.927346" elapsed="0.480089"/>
+</kw>
+<kw name="select user type drop">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-13T23:18:36.414293" level="INFO">${temp} = xpath://*[@data-testid='user-type-active']</msg>
+<var>${temp}</var>
+<arg>f"xpath://*[@data-testid='user-type-${type}']"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-13T23:18:36.411607" elapsed="0.002686"/>
+</kw>
+<return>
+<value>${temp}</value>
+<status status="PASS" start="2024-05-13T23:18:36.414849" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-13T23:18:36.414849" level="INFO">${type_drop_down} = xpath://*[@data-testid='user-type-active']</msg>
+<var>${type_drop_down}</var>
+<arg>${ACTIVE}</arg>
+<status status="PASS" start="2024-05-13T23:18:36.410586" elapsed="0.004263"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${type_drop_down}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T23:18:36.417924" elapsed="1.583209"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:38.008542" level="INFO">Clicking element 'xpath://*[@data-testid='user-type-active']'.</msg>
+<arg>${type_drop_down}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:38.007464" elapsed="1.142667"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:39.331543" level="INFO">Typing text 'ishore' into text field 'xpath://*[@data-testid='user-search-inp']/span/span/span[2]/input'.</msg>
+<arg>xpath://*[@data-testid='user-search-inp']/span/span/span[2]/input</arg>
+<arg>${search_user_test}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:39.330517" elapsed="1.293839"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:40.626423" level="INFO">Clicking button 'xpath://*[@data-testid='user-search-inp']/span/span/span[3]/button'.</msg>
+<arg>xpath://*[@data-testid='user-search-inp']/span/span/span[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:40.625394" elapsed="0.428533"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-13T23:18:46.057739" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-13T23:18:41.055531" elapsed="5.002722"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:46.113318" level="INFO">${result_count} = 2</msg>
+<var>${result_count}</var>
+<arg>//*[@class='ant-table-tbody']/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.060310" elapsed="0.053008"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result_count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.116909" elapsed="0.001486"/>
+</kw>
+<kw name="validate search result">
+<for flavor="IN RANGE">
+<iter>
+<kw name="profile name path">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-13T23:18:46.127270" level="INFO">${temp} = xpath://*[@data-testid='profile-name-0']</msg>
+<var>${temp}</var>
+<arg>f"xpath://*[@data-testid='profile-name-${i}']"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.126222" elapsed="0.001048"/>
+</kw>
+<return>
+<value>${temp}</value>
+<status status="PASS" start="2024-05-13T23:18:46.127270" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-13T23:18:46.128295" level="INFO">${profile_tag} = xpath://*[@data-testid='profile-name-0']</msg>
+<var>${profile_tag}</var>
+<arg>${i}</arg>
+<status status="PASS" start="2024-05-13T23:18:46.125196" elapsed="0.003627"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:46.232484" level="INFO">${curr_name} = Kishore Nn</msg>
+<var>${curr_name}</var>
+<arg>${profile_tag}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.128823" elapsed="0.104173"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${curr_name}</arg>
+<arg>${search_user_test}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.233555" elapsed="0.000000"/>
+</kw>
+<kw name="status path">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-13T23:18:46.237345" level="INFO">${temp} = xpath://*[@data-testid='user-tag-0']</msg>
+<var>${temp}</var>
+<arg>f"xpath://*[@data-testid='user-tag-${i}']"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.236763" elapsed="0.000582"/>
+</kw>
+<return>
+<value>${temp}</value>
+<status status="PASS" start="2024-05-13T23:18:46.238369" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-13T23:18:46.238891" level="INFO">${status_tag} = xpath://*[@data-testid='user-tag-0']</msg>
+<var>${status_tag}</var>
+<arg>${i}</arg>
+<status status="PASS" start="2024-05-13T23:18:46.235160" elapsed="0.003731"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:46.335743" level="INFO">${status} = Active</msg>
+<var>${status}</var>
+<arg>${status_tag}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.239461" elapsed="0.096282"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${status.lower()}</arg>
+<arg>${ACTIVE.lower()}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.337287" elapsed="0.004737"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-05-13T23:18:46.124681" elapsed="0.217885"/>
+</iter>
+<iter>
+<kw name="profile name path">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-13T23:18:46.346329" level="INFO">${temp} = xpath://*[@data-testid='profile-name-1']</msg>
+<var>${temp}</var>
+<arg>f"xpath://*[@data-testid='profile-name-${i}']"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.345779" elapsed="0.000550"/>
+</kw>
+<return>
+<value>${temp}</value>
+<status status="PASS" start="2024-05-13T23:18:46.347354" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-13T23:18:46.347877" level="INFO">${profile_tag} = xpath://*[@data-testid='profile-name-1']</msg>
+<var>${profile_tag}</var>
+<arg>${i}</arg>
+<status status="PASS" start="2024-05-13T23:18:46.344138" elapsed="0.004261"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:46.452150" level="INFO">${curr_name} = Kishore TC</msg>
+<var>${curr_name}</var>
+<arg>${profile_tag}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.348584" elapsed="0.104180"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${curr_name}</arg>
+<arg>${search_user_test}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.452764" elapsed="0.001485"/>
+</kw>
+<kw name="status path">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-05-13T23:18:46.456886" level="INFO">${temp} = xpath://*[@data-testid='user-tag-1']</msg>
+<var>${temp}</var>
+<arg>f"xpath://*[@data-testid='user-tag-${i}']"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.456316" elapsed="0.000570"/>
+</kw>
+<return>
+<value>${temp}</value>
+<status status="PASS" start="2024-05-13T23:18:46.457863" elapsed="0.000000"/>
+</return>
+<msg time="2024-05-13T23:18:46.458381" level="INFO">${status_tag} = xpath://*[@data-testid='user-tag-1']</msg>
+<var>${status_tag}</var>
+<arg>${i}</arg>
+<status status="PASS" start="2024-05-13T23:18:46.454770" elapsed="0.004131"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:46.558145" level="INFO">${status} = Active</msg>
+<var>${status}</var>
+<arg>${status_tag}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.459453" elapsed="0.098692"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${status.lower()}</arg>
+<arg>${ACTIVE.lower()}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.559289" elapsed="0.006579"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-05-13T23:18:46.343119" elapsed="0.222749"/>
+</iter>
+<var>${i}</var>
+<value>2</value>
+<status status="PASS" start="2024-05-13T23:18:46.123140" elapsed="0.442728"/>
+</for>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2024-05-13T23:18:46.566933" elapsed="0.000000"/>
+</return>
+<arg>${result_count}</arg>
+<status status="PASS" start="2024-05-13T23:18:46.122101" elapsed="0.446028"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@data-testid='user-search-inp']/span/span/span[2]/span</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.570198" elapsed="0.093277"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:46.665595" level="INFO">Clicking element 'xpath://*[@data-testid='user-search-inp']/span/span/span[2]/span'.</msg>
+<arg>xpath://*[@data-testid='user-search-inp']/span/span/span[2]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.664504" elapsed="0.226792"/>
+</kw>
+<kw name="Go Back">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-13T23:18:46.896862" level="INFO">Executing JavaScript:
+history.back()
+Without any arguments.</msg>
+<arg>history.back()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-13T23:18:46.895124" elapsed="0.152063"/>
+</kw>
+<status status="PASS" start="2024-05-13T23:18:46.893985" elapsed="0.153716"/>
+</kw>
+<status status="PASS" start="2024-05-13T23:18:35.918533" elapsed="11.130916"/>
+</test>
+<status status="PASS" start="2024-05-13T23:18:03.785270" elapsed="43.267804"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="userCheck">userCheck</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
